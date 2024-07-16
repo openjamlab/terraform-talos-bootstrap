@@ -1,0 +1,1 @@
+# tofu-module-talos-bootstrap
