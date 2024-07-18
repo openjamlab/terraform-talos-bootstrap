@@ -42,6 +42,13 @@ resource "talos_machine_configuration_apply" "nodes" {
       })
     ],
     /*
+    Extra Control Plane & Worker Config
+    */
+    [
+      templatefile("${path.module}/templates/extra-global.yaml.tmpl", {
+      })
+    ],
+    /*
     Control Plane Config
     */
     contains(keys(var.node_data.control_plane.nodes), each.key) ? [
