@@ -50,13 +50,5 @@ resource "talos_machine_configuration_apply" "nodes" {
         extra_config = var.extra_controlplane_config
       })
     ] : [],
-    /*
-    Worker Config
-    */
-    contains(keys(var.node_data.worker.nodes), each.key) ? [
-      templatefile("${path.module}/templates/worker.yaml.tmpl", {
-        extra_config = var.extra_worker_config
-      })
-    ] : [],
   ])
 }
