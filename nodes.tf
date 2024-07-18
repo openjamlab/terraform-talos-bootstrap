@@ -41,14 +41,6 @@ resource "talos_machine_configuration_apply" "nodes" {
       })
     ],
     /*
-    Extra Control Plane & Worker Config
-    */
-    [
-      templatefile("${path.module}/templates/extra-global.yaml.tmpl", {
-        extra_global_config = var.extra_global_config 
-      })
-    ],
-    /*
     Control Plane Config
     */
     contains(keys(var.node_data.control_plane.nodes), each.key) ? [
@@ -56,6 +48,14 @@ resource "talos_machine_configuration_apply" "nodes" {
         vip_address = var.cluster.vip_address
       })
     ] : [],
+    /*
+    Extra Control Plane & Worker Config
+    */
+    [
+      templatefile("${path.module}/templates/extra-global.yaml.tmpl", {
+        extra_global_config = var.extra_global_config 
+      })
+    ],
     /*
     Extra Control Plane Config
     */
