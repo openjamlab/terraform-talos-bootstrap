@@ -62,14 +62,17 @@ module talos {
     }
   }
 
+/*
+An example on how to include extra talos config, also applies to extra_controlplane_config and extra_worker_config variables.
+*/
 extra_global_config = <<EOF
 install:
   wipe: false
 EOF
 
-extra_controlplane_config = {}
+extra_controlplane_config = ""
 
-extra_worker_config = {}
+extra_worker_config = ""
 }
 ```
 

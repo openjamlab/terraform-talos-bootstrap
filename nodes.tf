@@ -45,7 +45,7 @@ resource "talos_machine_configuration_apply" "nodes" {
     */
     [
       templatefile("${path.module}/templates/extra-global.yaml.tmpl", {
-        extra_config    = var.extra_global_config 
+        extra_config = var.extra_global_config 
       })
     ],
     /*
