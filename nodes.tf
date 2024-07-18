@@ -45,7 +45,7 @@ resource "talos_machine_configuration_apply" "nodes" {
     */
     [
       templatefile("${path.module}/templates/extra-global.yaml.tmpl", {
-        extra_config = yamlencode(var.extra_global_config)
+        extra_config = var.extra_global_config 
       })
     ],
     /*
@@ -61,7 +61,7 @@ resource "talos_machine_configuration_apply" "nodes" {
     */
     contains(keys(var.node_data.control_plane.nodes), each.key) ? [
       templatefile("${path.module}/templates/extra-controlplane.yaml.tmpl", {
-        extra_config = yamlencode(var.extra_controlplane_config)
+        extra_config = var.extra_controlplane_config
       })
     ] : [],
     /*
@@ -69,7 +69,7 @@ resource "talos_machine_configuration_apply" "nodes" {
     */
     contains(keys(var.node_data.worker.nodes), each.key) ? [
       templatefile("${path.module}/templates/extra-worker.yaml.tmpl", {
-        extra_config = yamlencode(var.extra_worker_config)
+        extra_config = var.extra_worker_config
       })
     ] : [],
   ])
