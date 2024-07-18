@@ -28,13 +28,16 @@ variable "node_data" {
 }
 
 variable "extra_global_config" {
-  type = string
+  type     = string
+  default  = ""
 }
 
 variable "extra_controlplane_config" {
-  type = string
+  type     = string
+  default  = ""
 }
 
 variable "extra_worker_config" {
-  type = string
+  type     = string
+  default  = ""
 }
