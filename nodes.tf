@@ -38,7 +38,6 @@ resource "talos_machine_configuration_apply" "nodes" {
         default_gateway = var.node_data.default_gateway
         ntp_server      = var.node_data.ntp_endpoint
         vip_address     = var.cluster.vip_address
-        extra_config    = var.extra_global_config
       })
     ],
     /*
@@ -46,6 +45,7 @@ resource "talos_machine_configuration_apply" "nodes" {
     */
     [
       templatefile("${path.module}/templates/extra-global.yaml.tmpl", {
+        extra_config    = var.extra_global_config 
       })
     ],
     /*
@@ -54,7 +54,6 @@ resource "talos_machine_configuration_apply" "nodes" {
     contains(keys(var.node_data.control_plane.nodes), each.key) ? [
       templatefile("${path.module}/templates/controlplane.yaml.tmpl", {
         vip_address  = var.cluster.vip_address
-        extra_config = var.extra_controlplane_config
       })
     ] : [],
     /*
@@ -62,6 +61,7 @@ resource "talos_machine_configuration_apply" "nodes" {
     */
     contains(keys(var.node_data.control_plane.nodes), each.key) ? [
       templatefile("${path.module}/templates/extra-controlplane.yaml.tmpl", {
+        extra_config = var.extra_controlplane_config
       })
     ] : [],
     /*
@@ -69,6 +69,7 @@ resource "talos_machine_configuration_apply" "nodes" {
     */
     contains(keys(var.node_data.worker.nodes), each.key) ? [
       templatefile("${path.module}/templates/extra-worker.yaml.tmpl", {
+        extra_config = var.extra_worker_config
       })
     ] : [],
   ])
