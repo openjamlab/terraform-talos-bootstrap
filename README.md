@@ -78,6 +78,22 @@ extra_worker_config = ""
 
 ## Get kubeconfig & talosconfig
 
+Create an output.tf file with the following contents.
+
+```terraform
+output "talosconfig" {
+  value     = module.talos.talosconfig
+  sensitive = true
+}
+
+output "kubeconfig" {
+  value     = module.talos.kubeconfig
+  sensitive = true
+}
+```
+
+Run the following commands to write kubeconfig and talosconfig files to local.
+
 ```
 tofu output -raw kubeconfig > ~/.kube/config
 tofu output -raw talosconfig > ~/.talos/config
