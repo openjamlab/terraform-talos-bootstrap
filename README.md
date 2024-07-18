@@ -62,21 +62,13 @@ module talos {
     }
   }
 
-/*
-An example on how to include extra talos config, also applies to extra_controlplane_config and extra_worker_config variables.
-*/
-extra_global_config = <<EOF
-  machine:
-    install:
-      wipe: true
-  EOF
+  extra_global_config = ""
 
-extra_controlplane_config = ""
-
-extra_worker_config = ""
+  extra_controlplane_config = ""
+    
+  extra_worker_config = ""
 }
 ```
-
 ## Get kubeconfig & talosconfig
 
 Create an output.tf file with the following contents.
@@ -99,3 +91,26 @@ Run the following commands to write kubeconfig and talosconfig files to local.
 tofu output -raw kubeconfig > ~/.kube/config
 tofu output -raw talosconfig > ~/.talos/config
 ```
+
+## Adding Extra Configuration
+
+You can extend the configuration of the Talos nodes using the `extra_global_config`, `extra_controlplane_config`, and `extra_worker_config` variables. Applying custom configuration can have unintended consequences and is not covered by the support scope of this module.
+
+```terraform
+module "talos" {
+  ...
+  extra_global_config = <<EOF
+    # Example control plane and worker configuration
+    machine:
+      install:
+        wipe: false
+    EOF
+
+  extra_controlplane_config = <<EOF
+    # Add control plane specific configurations here
+    EOF
+    
+  extra_worker_config = <<EOF
+    # Add worker node specific configurations here
+    EOF
+}
