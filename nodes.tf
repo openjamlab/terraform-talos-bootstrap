@@ -33,7 +33,7 @@ resource "talos_machine_configuration_apply" "nodes" {
       templatefile("${path.module}/templates/global.yaml.tmpl", {
         hostname        = format("%s-%s", contains(keys(var.node_data.control_plane.nodes), each.key) ? "controlplane" : "worker", random_string.nodes[each.key].result)
         ip_address      = each.key
-        install_disk    = each.key.disk
+        install_disk    = each.key.install_disk
         dns_server      = var.node_data.dns_endpoint
         default_gateway = var.node_data.default_gateway
         ntp_server      = var.node_data.ntp_endpoint
