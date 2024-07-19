@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/openjamlab/tofu-talos-bootstrap/compare/v0.1.0...v0.2.0) (2024-07-19)
+
+
+### Features
+
+* Added Pod and Service CIDR variable to allow users to chose CIDR ranges ([#7](https://github.com/openjamlab/tofu-talos-bootstrap/issues/7)) ([bf322d1](https://github.com/openjamlab/tofu-talos-bootstrap/commit/bf322d12e11995300f2527bde5c0329e17d09255))
+
 ## 0.1.0 (2024-07-19)
 
 
