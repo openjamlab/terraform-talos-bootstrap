@@ -12,8 +12,7 @@
 
 ```terraform
 module talos {
-  source  = "https://github.com/openjamlab/tofu-talos-bootstrap.git"
-  version = "v1.0.0"
+  source  = "https://github.com/openjamlab/tofu-talos-bootstrap.git?ref=v0.1.0"
 
   cluster = {
     name               = "myCluster"
