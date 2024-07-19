@@ -1,11 +1,11 @@
 <h1 align="center">Talos Bootstrap OpenTofu Module</h1>
 <p align="center"><i>OpenTofu module to bootstrap and configure machines using Talos Linux. </i></p>
 <div align="center">
-<a href="[https://github.com/jamie-stinson/common-helm-library/stargazers](https://github.com/jamie-stinson/common-helm-library/stargazers)"><img src="https://img.shields.io/github/stars/jamie-stinson/common-helm-library?style=for-the-badge" alt="Stars Badge"/></a>
-<a href="https://github.com/jamie-stinson/common-helm-library/pulls"><img src="https://img.shields.io/github/issues-pr/jamie-stinson/common-helm-library?style=for-the-badge" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/jamie-stinson/common-helm-library/issues"><img src="https://img.shields.io/github/issues/jamie-stinson/common-helm-library?style=for-the-badge" alt="Issues Badge"/></a>
-<a href="https://github.com/jamie-stinson/common-helm-library/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/jamie-stinson/common-helm-library?style=for-the-badge"></a>
-<a href="https://github.com/jamie-stinson/common-helm-library/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jamie-stinson/common-helm-library?style=for-the-badge" alt="License Badge"/></a>
+<a href="[https://github.com/openjamlab/tofu-talos-bootstrap/stargazers](https://github.com/openjamlab/tofu-talos-bootstrap/stargazers)"><img src="https://img.shields.io/github/stars/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Stars Badge"/></a>
+<a href="https://github.com/openjamlab/tofu-talos-bootstrap/pulls"><img src="https://img.shields.io/github/issues-pr/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/openjamlab/tofu-talos-bootstrap/issues"><img src="https://img.shields.io/github/issues/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Issues Badge"/></a>
+<a href="https://github.com/openjamlab/tofu-talos-bootstrap/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/openjamlab/tofu-talos-bootstrap?style=for-the-badge"></a>
+<a href="https://github.com/openjamlab/tofu-talos-bootstrap/blob/master/LICENCE"><img src="https://img.shields.io/github/license/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Licence Badge"/></a>
 </div>
 
 ## Usage
