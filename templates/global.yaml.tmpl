@@ -30,5 +30,9 @@ cluster:
     extraArgs:
       metrics-bind-address: 0.0.0.0:10249
   network:
-      cni:
-          name: ${cni}
+    cni:
+        name: ${cni}
+    podSubnets:
+        - ${pod_cidr}
+    serviceSubnets:
+        - ${service_cidr}

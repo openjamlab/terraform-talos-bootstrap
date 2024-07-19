@@ -5,6 +5,8 @@ variable "cluster" {
     kubernetes_version = string
     talos_version      = string
     cni                = string
+    pod_cidr           = string
+    service_cidr       = string
   })
 }
 
