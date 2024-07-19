@@ -38,6 +38,9 @@ resource "talos_machine_configuration_apply" "nodes" {
         default_gateway = var.node_data.default_gateway
         ntp_server      = var.node_data.ntp_endpoint
         vip_address     = var.cluster.vip_address
+        cni             = var.cluster.cni
+        pod_cidr        = var.cluster.pod_cidr
+        service_cidr    = var.cluster.service_cidr
       })
     ],
     /*

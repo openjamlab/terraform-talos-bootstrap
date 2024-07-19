@@ -19,6 +19,9 @@ module talos {
     vip_address        = "10.0.0.30"
     kubernetes_version = "v1.30.2"
     talos_version      = "v1.7.5"
+    cni                = "flannel"
+    pod_cidr           = "10.244.0.0/16"
+    service_cidr       = "10.96.0.0/12"
   }
 
   node_data = {

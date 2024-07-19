@@ -4,6 +4,9 @@ variable "cluster" {
     vip_address        = string
     kubernetes_version = string
     talos_version      = string
+    cni                = string
+    pod_cidr           = string
+    service_cidr       = string
   })
 }
 
