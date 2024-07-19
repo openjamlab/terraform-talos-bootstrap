@@ -1,0 +1,31 @@
+machine:
+  install:
+    disk: ${install_disk}
+  systemDiskEncryption:
+    ephemeral:
+      provider: luks2
+      keys:
+        - nodeID: {}
+          slot: 0
+    state:
+      provider: luks2
+      keys:
+        - nodeID: {}
+          slot: 0
+  network:
+    hostname: ${hostname}
+    nameservers:
+      - ${dns_server}
+    interfaces:
+      - deviceSelector:
+          busPath: "0*"
+        dhcp: false
+        addresses:
+          - ${ip_address}/24
+  time:
+    servers:
+      - ${ntp_server}
+cluster:
+  proxy:
+    extraArgs:
+      metrics-bind-address: 0.0.0.0:10249
