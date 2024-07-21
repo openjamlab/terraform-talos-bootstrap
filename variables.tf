@@ -19,12 +19,14 @@ variable "node_data" {
     control_plane   = object({
       nodes = map(object({
         install_disk = string
+        wipe         = bool
       }))
     })
 
     worker          = object({
       nodes = map(object({
         install_disk = string
+        wipe         = bool
       }))
     })
   })

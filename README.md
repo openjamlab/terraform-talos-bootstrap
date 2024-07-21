@@ -36,12 +36,16 @@ module talos {
       */
         "10.0.0.31" = {
           install_disk = "/dev/sda"
+          wipe         = true
         },
         "10.0.0.32" = {
           install_disk = "/dev/sda"
+          wipe         = true
+
         },
         "10.0.0.33" = {
           install_disk = "/dev/sda"
+          wipe         = true
         }
       }
     }
@@ -53,12 +57,15 @@ module talos {
       */
         "10.0.0.34" = {
           install_disk = "/dev/sda"
+          wipe         = true
         },
         "10.0.0.35" = {
           install_disk = "/dev/sda"
+          wipe         = true
         },
         "10.0.0.36" = {
           install_disk = "/dev/sda"
+          wipe         = true
         }
       }
     }
