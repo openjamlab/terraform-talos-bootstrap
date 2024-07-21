@@ -3,7 +3,7 @@ name: "release-please"
 on:
   push:
     branches:
-      - main
+      - 'release'
 
 jobs:
   release-please:
@@ -12,4 +12,3 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: terraform-module
-          default-branch: main
