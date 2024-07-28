@@ -12,7 +12,8 @@
 
 ```terraform
 module talos {
-  source  = "https://github.com/openjamlab/terraform-talos-bootstrap.git?ref=v0.1.0"
+  source  = "openjamlab/bootstrap/talos"
+  version = "the-latest-version-of-the-module"
 
   cluster = {
     name               = "myCluster"
@@ -116,3 +117,4 @@ module "talos" {
     # Add worker node specific configurations here
     EOF
 }
+```
