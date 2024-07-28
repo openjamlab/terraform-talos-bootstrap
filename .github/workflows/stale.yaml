@@ -11,6 +11,7 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           delete-branch: true
+          close-issue-message: This PR was automatically closed for being stale for 10 days.
 
           # PR
           days-before-pr-stale: 90
@@ -19,8 +20,6 @@ jobs:
           stale-pr-message: |
             This PR has been automatically marked as stale because it has been open for 90 days
             with no activity. Remove the stale label or add a comment or this PR will be closed in 10 days.
-          close-issue-message: This PR was automatically closed for being stale for 10 days.
-          #exempt-pr-labels: bug,wip,on-hold
 
           # Issue
           days-before-issue-stale: 30
@@ -29,5 +28,4 @@ jobs:
           stale-issue-message: |
             This issue has been automatically marked as stale because it has been open for 30 days
             with no activity. Remove the stale label or add a comment or this PR will be closed in 10 days.
-          close-issue-message: This issue was automatically closed for being stale for 10 days.
-          #exempt-issue-labels: bug,wip,on-hold
+
