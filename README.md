@@ -27,7 +27,7 @@ module "bootstrap" {
 
   node_data = {
     default_gateway = "10.0.0.1"
-    dns_endpoint    = "10.0.0.1"
+    dns_endpoint    = "1.1.1.1"
     ntp_endpoint    = "time.cloudflare.com"
 
     control_plane = {
