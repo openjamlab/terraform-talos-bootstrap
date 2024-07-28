@@ -1,18 +1,18 @@
-<h1 align="center">Talos Bootstrap OpenTofu Module</h1>
-<p align="center"><i>OpenTofu module to bootstrap and configure machines using Talos Linux. </i></p>
+<h1 align="center">Talos Bootstrap Terraform Module</h1>
+<p align="center"><i>Terraform module to bootstrap and configure machines using Talos Linux. </i></p>
 <div align="center">
-<a href="[https://github.com/openjamlab/tofu-talos-bootstrap/stargazers](https://github.com/openjamlab/tofu-talos-bootstrap/stargazers)"><img src="https://img.shields.io/github/stars/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Stars Badge"/></a>
-<a href="https://github.com/openjamlab/tofu-talos-bootstrap/pulls"><img src="https://img.shields.io/github/issues-pr/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/openjamlab/tofu-talos-bootstrap/issues"><img src="https://img.shields.io/github/issues/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Issues Badge"/></a>
-<a href="https://github.com/openjamlab/tofu-talos-bootstrap/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/openjamlab/tofu-talos-bootstrap?style=for-the-badge"></a>
-<a href="https://github.com/openjamlab/tofu-talos-bootstrap/blob/master/LICENCE"><img src="https://img.shields.io/github/license/openjamlab/tofu-talos-bootstrap?style=for-the-badge" alt="Licence Badge"/></a>
+<a href="[https://github.com/openjamlab/terraform-talos-bootstrap/stargazers](https://github.com/openjamlab/terraform-talos-bootstrap/stargazers)"><img src="https://img.shields.io/github/stars/openjamlab/terraform-talos-bootstrap?style=for-the-badge" alt="Stars Badge"/></a>
+<a href="https://github.com/openjamlab/terraform-talos-bootstrap/pulls"><img src="https://img.shields.io/github/issues-pr/openjamlab/terraform-talos-bootstrap?style=for-the-badge" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/openjamlab/terraform-talos-bootstrap/issues"><img src="https://img.shields.io/github/issues/openjamlab/terraform-talos-bootstrap?style=for-the-badge" alt="Issues Badge"/></a>
+<a href="https://github.com/openjamlab/terraform-talos-bootstrap/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/openjamlab/terraform-talos-bootstrap?style=for-the-badge"></a>
+<a href="https://github.com/openjamlab/terraform-talos-bootstrap/blob/master/LICENCE"><img src="https://img.shields.io/github/license/openjamlab/terraform-talos-bootstrap?style=for-the-badge" alt="Licence Badge"/></a>
 </div>
 
 ## Usage
 
 ```terraform
 module talos {
-  source  = "https://github.com/openjamlab/tofu-talos-bootstrap.git?ref=v0.1.0"
+  source  = "https://github.com/openjamlab/terraform-talos-bootstrap.git?ref=v0.1.0"
 
   cluster = {
     name               = "myCluster"
@@ -90,8 +90,8 @@ output "kubeconfig" {
 Run the following commands to write kubeconfig and talosconfig files to local.
 
 ```
-tofu output -raw kubeconfig > ~/.kube/config
-tofu output -raw talosconfig > ~/.talos/config
+terraform output -raw kubeconfig > ~/.kube/config
+terraform output -raw talosconfig > ~/.talos/config
 ```
 
 ## Adding Extra Configuration
