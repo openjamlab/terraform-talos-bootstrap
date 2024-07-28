@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/openjamlab/terraform-talos-bootstrap/compare/v0.2.0...v0.3.0) (2024-07-28)
+
+
+### Features
+
+* Add variable descriptions and defaults ([18261c5](https://github.com/openjamlab/terraform-talos-bootstrap/commit/18261c51b132659403fc39a4404dc8959fa66c85))
+
 ## [0.2.0](https://github.com/openjamlab/tofu-talos-bootstrap/compare/v0.1.0...v0.2.0) (2024-07-19)
 
 
