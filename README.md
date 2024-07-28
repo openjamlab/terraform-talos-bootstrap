@@ -11,7 +11,7 @@
 ## Usage
 
 ```terraform
-module talos {
+module "bootstrap" {
   source  = "openjamlab/bootstrap/talos"
   version = "the-latest-version-of-the-module"
 
@@ -100,7 +100,7 @@ terraform output -raw talosconfig > ~/.talos/config
 You can extend the configuration of the Talos nodes using the `extra_global_config`, `extra_controlplane_config`, and `extra_worker_config` variables. Applying custom configuration can have unintended consequences and is not covered by the support scope of this module.
 
 ```terraform
-module "talos" {
+module "bootstrap" {
   ...
   extra_global_config = <<EOF
     # Example control plane and worker configuration
